@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Fraunces:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  --neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Montserrat";
+  --ff-secondary: "Fraunces";
+
+  --fs-paragraph: 14px;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-dark-cyan {
+  background-color: var(--primary-dark-cyan);
+}
+
+.margin-block {
+  margin-block: .6em;
+}
+
+.text-secondary {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-700);
+  color: var(--neutral-very-dark-blue);
+  font-size: 1.8rem;
+}
+
+.text-secondary:nth-of-type(2) {
+  color: var(--primary-dark-cyan);
+}
+
+.text-primary {
+  font-size: var(--fs-paragraph);
+  font-family: var(--ff-primary), sans-serif;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+img{
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary, "sans-serif");
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-cream);
+}
+
+.card {
+  max-width: min(34em, 65%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.name {
+  font-family: var(--ff-primary);
+  letter-spacing: 2px;
+  font-size: var(--fs-paragraph);
+  text-transform: uppercase;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+
+.ad {
+  background-color: var(--neutral-white);
+  padding: min(3em,1em);
+  width: 50%;
+}
+
+.image{
+  width: 50%;
+}
+
+.gap {
+  gap: 0.6em;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.paragraph{
+  line-height: 1.4;
+}
+
+.border-soft{
+  border-radius: 10px;
+}
+
+button {
+  text-decoration: none;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: var(--neutral-white);
+  padding: 1em 2em;
+  font-weight: var(--fw-500);
+  font-family: var(--ff-primary), sans-serif;
+}
+
+button:active{
+  background-color: var(--primary-dark-cyan);
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+@media screen and (max-width: 40em) {
+  .card{
+    display: block;
+    margin-block: 1em;
+  }
+  .image, .ad{
+    width: 100%;
+  }
+}
+
